@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('restaurant-background.jpg') center/cover no-repeat;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+		a{
+			            font-family: 'Arial', sans-serif;
+            color: #007BFF;
+            font-size: 20px;
+            border: #007BFF;
+           
+
+		}
+        h1 {
+            font-family: 'Cursive', cursive;
+            color: #007BFF;
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .image-item {
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .image-item:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<buttonbody>
+    <h1>Our Delicious Menu</h1>
+
+    <div class="image-grid">
+        
+        <div class="image-item">
+            <img src="coffe.jpg" alt="Coffee">
+            <p>Coffee</p>
+        </div>
+        <div class="image-item">
+            <img src="pohe.jpg" alt="Pohe">
+            <p>Pohe</p>
+        </div>
+        <div class="image-item">
+            <img src="samosa.jpg" alt="Samosa">
+            <p>Samosa</p>
+        </div>
+        <div class="image-item">
+            <img src="dosa.jpg" alt="Dosa">
+            <p>Dosa</p>
+        </div>
+        <div class="image-item">
+            <img src="idlisambar.jpg" alt="Idli Sambar">
+            <p>Idli Sambar</p>
+        </div>
+        <div class="image-item">
+            <img src="puribhaji.jpg" alt="Puri Bhaji">
+            <p>Puri Bhaji</p>
+        </div>
+        <div class="image-item">
+            <img src="cheesedosa.jpg" alt="Cheese Dosa">
+            <p>Cheese Dosa</p>
+        </div>
+    </div>
+    <a href="breakfast.html">Place Order</a>
+</body>
+</html>

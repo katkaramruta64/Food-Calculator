@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Form</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #menuForm {
+            width: 300px;
+            margin-top: 12%;
+            margin-left: 37%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        select {
+            height: 36px;
+        }
+
+        input[type="number"] {
+            height: 36px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+       /* Style for the result div */
+    #result {
+        background-color: #f9f9f9;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        text-align: center;
+        margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="menuForm" action="BreakfastServlet" method = "post">
+        <label for="menu">Select a menu:</label>
+        
+        <select id="menu" name="menu" onchange="calculatePrice()">
+            <option value="BlackTea">Black Tea</option>
+            <option value="Tea">Milk Tea</option>
+            <option value="GreenTea">Green Tea</option>
+            <option value="Samosa">Samosa</option>
+			<option value="ChocoSamosa">Choco Samosa</option>
+			<option value="PaneerSamosa">Paneer Samosa</option>
+			<option value="PuriBhaji">Puri Bhaji</option>
+			<option value="IdliSambar">Idli Sambar</option>
+			<option value="IdliChutaney">IdliChutaney</option>
+			<option value="Dosa">Dosa</option>
+			<option value="MasalaDosa">Masala Dosa</option>
+			<option value="PaperDosa">Paper Dosa</option>
+			<option value="CheeseDosa">Cheese Dosa</option>
+			<option value="RavaDosa">Rava Dosa</option>
+			<option value="Upama">Upama</option>
+			<option value="Pohe">Pohe</option>
+
+
+
+            <!-- Add more menu options as needed -->
+        </select>
+
+        <label for="quantity">Enter quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+
+        <input type="submit" value="Place Order">
+    
+    
+		
+	</form>
+
+    <div id="result"></div>
+	<script>
+function calculatePrice() {
+    // Get the selected menu and quantity
+    var menuSelect = document.getElementById("menu");
+    var selectedMenu = menuSelect.options[menuSelect.selectedIndex].value;
+    var quantity = parseInt(document.getElementById("quantity").value);
+
+    // Define the price for each menu item (you can adjust these values)
+    var menuPrices = {
+        "BlackTea": 10.0,
+        "Tea": 15.0,
+        "GreenTea": 20.0,
+        "Samosa":15.0,
+        "ChocoSamosa":40.0,
+        "PaneerSamosa":45.0,
+        "PuriBhaji":45.0,
+        "IdliSambar":40.0,
+        "IdliChutaney":30.0,
+        "Dosa":25.0,
+        "MasalaDosa":30.0,
+        "PaperDosa":30.0,
+        "CheeseDosa":45.0,
+        "RavaDosa":20.0,
+        "Upama":20.0,
+        "Pohe":20.0,
+         // Add prices for other menu items
+    };
+
+    // Calculate the total price
+    var totalPrice = menuPrices[selectedMenu] * 1;
+
+    // Display the price in the result div
+    var resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = " Price: Rs." + totalPrice.toFixed(2);
+}
+</script>
+
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f9f9f9, #ccc); /* Gradient background (red and gold) */
+            text-align: center;
+            color: #007BFF; /* White text color */
+        }
+
+        .welcome-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 72px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 20px 40px;
+            background: #007BFF; /* Vibrant red button for contrast */
+            color: #FFF; /* White text color */
+            font-size: 36px;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.5s, transform 0.2s;
+        }
+
+        .button:hover {
+            background: #007BFF; /* Slight color change on hover */
+            transform: scale(1.05); /* Button scales up on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h1><b>Welcome to Our Restaurant</b></h1>
+        <img src="hotel.jpg" alt="Restaurant Interior" width="500">
+        <p>Indulge in a world of culinary delights. Explore our menu and savor the flavors.</p>
+        <a class="button" href="Menu.html">Explore the Menu</a>
+    </div>
+</body>
+</html>
